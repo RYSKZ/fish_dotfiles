@@ -34,8 +34,8 @@ mcfly-fzf init fish | source
 # Fix Windows Terminal startup directory
 # Define a function to check the parent process directory of Windows Terminal
 function fix_windows_terminal_directory
-  if test "$PWD" = "/mnt/c/Windows/System32" # If the current working directory is the target directory
-    cd "/mnt/c/Users/Amit/Downloads" # Then set the current working directory to <PATH>
+  if test "$PWD" = "/mnt/c/Windows/system32"
+    cd "/mnt/c/Users/Amit/Downloads"
   end
 end
 
