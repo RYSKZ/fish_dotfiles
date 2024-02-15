@@ -1,4 +1,6 @@
 # Set Remote Servers SSH Connections Alias
+source ~/.config/fish/conf.d/env_paths.fish
+
 # Lab
 ## Servidores
 alias ta="$remote_servers_scripts_dir/tardis.sh"
