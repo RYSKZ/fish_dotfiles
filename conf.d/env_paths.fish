@@ -17,4 +17,4 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 set -gx PATH "$HOME/.bin" $PATH
 
 # Set .local/bin
-set -gx PATH "$HOME/amit/.local/bin" $PATH
+set -gx PATH "$HOME/.local/bin" $PATH
