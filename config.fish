@@ -32,12 +32,31 @@ mcfly init fish | source
 mcfly-fzf init fish | source
 
 # Fix Windows Terminal startup directory
-# Define a function to check the parent process directory of Windows Terminal
-function fix_windows_terminal_directory
-  if test "$PWD" = "/mnt/c/Windows/system32"
-    cd "/mnt/c/Users/Amit/Downloads"
-  end
+## Define a function to check the parent process directory of Windows Terminal
+function fix_wt_start_dir
+    # echo "Current directory: $PWD"
+        if test "$PWD" = "/mnt/c/Windows/System32"
+            # echo "Match found, changing directory..."
+            cd /mnt/c/Users/Amit/Downloads
+            # echo "Directory changed to: $PWD"
+        else
+            # echo "No match found, staying in the current directory."
+        end
 end
 
-# Call the function
-fix_windows_terminal_directory
+## Call the function
+fix_wt_start_dir
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/amit/miniconda3/bin/conda
+    eval /home/amit/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/amit/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/home/amit/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/amit/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+

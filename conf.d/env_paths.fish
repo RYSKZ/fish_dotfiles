@@ -18,3 +18,6 @@ set -gx PATH "$HOME/.bin" $PATH
 
 # Set .local/bin
 set -gx PATH "$HOME/.local/bin" $PATH
+
+# Set conda path
+set -gx PATH "$HOME/miniconda3/bin" $PATH
